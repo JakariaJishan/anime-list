@@ -9,6 +9,8 @@ function Anime({ anime }) {
       <img src={images.jpg.image_url}></img>
       {title}
       {episodes}
+
+      
     </NavLink>
   );
 }
