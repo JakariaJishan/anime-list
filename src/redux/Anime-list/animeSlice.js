@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 
 const initialState = {
   animeList: [],
@@ -7,22 +6,24 @@ const initialState = {
 };
 
 export const fetchAnime = createAsyncThunk("anime/fetchAnime", async () => {
-  const res = await axios.get("https://api.jikan.moe/v4/anime");
-  return res.data;
+  const res = await fetch("https://api.jikan.moe/v4/anime");
+  const data = await res.json()
+  return data;
 });
-
-console.log(initialState.animeList);
 
 export const animeSlice = createSlice({
   name: "anime",
   initialState,
   reducers: {},
-  extraReducers : (builder)=>{
+  extraReducers: (builder) => {
     builder.addCase(fetchAnime.fulfilled, (state, action) => {
-        console.log(action.payload);
-        state.animeList.push(action.payload)
-    })
-  }
+      state.animeList = action.payload;
+    });
+
+    builder.addCase(fetchAnime.rejected, (state, action) => {
+      console.log(action.payload);
+    });
+  },
 });
 
 // Action creators are generated for each case reducer function
