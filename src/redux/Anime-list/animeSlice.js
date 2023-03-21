@@ -11,21 +11,21 @@ export const fetchAnime = createAsyncThunk("anime/fetchAnime", async () => {
   return res.data;
 });
 
-console.log(initialState.animeList);
-
 export const animeSlice = createSlice({
   name: "anime",
   initialState,
   reducers: {},
-  extraReducers : (builder)=>{
+  extraReducers: (builder) => {
     builder.addCase(fetchAnime.fulfilled, (state, action) => {
-        console.log(action.payload);
-        state.animeList.push(action.payload)
-    })
-  }
+      state.animeList = action.payload;
+    });
+
+    builder.addCase(fetchAnime.rejected, (state, action) => {
+      console.log(action.payload);
+    });
+  },
 });
 
-// Action creators are generated for each case reducer function
 export const { increment, decrement, incrementByAmount } = animeSlice.actions;
 
 export default animeSlice.reducer;
