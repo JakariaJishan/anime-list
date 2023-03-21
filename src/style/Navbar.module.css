@@ -1,0 +1,49 @@
+.nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background: #2B2D42;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.desktopIcon {
+    display: flex;
+    gap: 10px;
+}
+
+.desktopIcon img:hover {
+    opacity: 0.7;
+}
+
+.menu {
+    display: none;
+}
+
+.brand {
+    color: blueviolet;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+.arrow:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        display: block;
+    }
+
+    .desktopIcon {
+        display: none;
+    }
+}
