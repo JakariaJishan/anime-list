@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import styles from '../style/Home.module.css';
+import styles from "../style/Home.module.css";
 import Anime from "./Anime";
+import Hero from "./Hero";
 
 function Home() {
   const animeArr = useSelector((state) => state.animeList.animeList.data);
@@ -21,8 +22,14 @@ function Home() {
   };
   return (
     <div>
+      <Hero />
+
       <div className={styles.filter}>
-      <input type="text" onChange={(e) => handleOnChange(e)}  placeholder='Search Anime...'/>
+        <input
+          type="text"
+          onChange={(e) => handleOnChange(e)}
+          placeholder="Search Anime..."
+        />
       </div>
       <div className={styles.showcase}>
         {finalAnime === undefined &&

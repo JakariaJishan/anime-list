@@ -3,15 +3,16 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.showcase>a {
+.showcase a {
     background: #CF4278;
     padding: 1em;
 }
 
-.showcase>a:nth-child(4n+3),
-a:nth-child(4n+2) {
+.showcase a:nth-child(4n+2),
+a:nth-child(4n+3):not(:first-child) {
     background: #FC5193;
 }
+
 
 .filter input {
     width: 25%;
