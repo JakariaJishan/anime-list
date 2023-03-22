@@ -21,7 +21,9 @@ function Home() {
   };
   return (
     <div>
-      <input type="text" onChange={(e) => handleOnChange(e)} />
+      <div className={styles.filter}>
+      <input type="text" onChange={(e) => handleOnChange(e)}  placeholder='Search Anime...'/>
+      </div>
       <div className={styles.showcase}>
         {finalAnime === undefined &&
           animeArr?.map((anime) => <Anime key={anime.mal_id} anime={anime} />)}
