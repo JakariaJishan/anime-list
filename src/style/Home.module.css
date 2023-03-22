@@ -1,6 +1,7 @@
 .showcase {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 
 .showcase a {
@@ -15,7 +16,7 @@ a:nth-child(4n+3):not(:first-child) {
 
 
 .filter input {
-    width: 25%;
+    min-width: 300px;
     margin: 3em auto;
     display: block;
     padding: 1em;
@@ -32,6 +33,14 @@ a:nth-child(4n+3):not(:first-child) {
 .filter input::placeholder {
     color: #CBC4CC;
 
+}
+
+.loader {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 600px) {

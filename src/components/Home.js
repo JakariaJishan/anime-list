@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Circles } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import styles from "../style/Home.module.css";
 import Anime from "./Anime";
@@ -22,7 +23,7 @@ function Home() {
   };
   return (
     <div>
-      <Hero animeArr={animeArr}/>
+      <Hero animeArr={animeArr} />
       <div className={styles.filter}>
         <input
           type="text"
@@ -38,7 +39,17 @@ function Home() {
         ))}
       </div>
 
-      {/* {!finalAnime?.length && <p>no found</p>} */}
+      {!animeArr?.length && (
+        <Circles
+          height="80"
+          width="80"
+          color="#F95091"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass={styles.loader}
+          visible={true}
+        />
+      )}
     </div>
   );
 }
