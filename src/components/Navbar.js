@@ -14,12 +14,11 @@ function Navbar() {
   const filteredArr = episodes
     ? episodes?.filter((episode) => episode.mal_id == id)
     : [];
-
-    console.log(location);
+  const path = `/episodes/${id}`;
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        {location.pathname === `/episodes/${id}` && (
+        {location.pathname === path && (
           <NavLink to="/" className={styles.arrow}>
             <img src={leftArrow} height="20px" width="20px" />
           </NavLink>
@@ -33,7 +32,7 @@ function Navbar() {
             {filteredArr[0]?.title}
           </NavLink>
         ) : (
-          <NavLink to="/" className={styles.brand}>
+          <NavLink to="#" className={styles.brand}>
             ANIME
           </NavLink>
         )}
