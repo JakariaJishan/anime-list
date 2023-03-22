@@ -1,22 +1,21 @@
 .nav {
-    padding: 20px 0;
+    padding: 16px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    margin: 0 auto;
+    margin: 0 1em;
 }
 
 .header {
-    background: #2B2D42;
-    position: sticky;
-    top: 0;
+    background: rgba(35, 38, 67, .5);
+    position: relative;
+    z-index: 10;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .desktopIcon {
     display: flex;
-    gap: 10px;
+    gap: 40px;
 }
 
 .desktopIcon img:hover {
@@ -28,7 +27,7 @@
 }
 
 .brand {
-    color: blueviolet;
+    color: white;
     font-size: 1em;
     font-weight: bold;
 }

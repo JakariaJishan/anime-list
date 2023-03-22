@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { Circles } from "react-loader-spinner";
 import { useSelector } from "react-redux";
+import styles from "../style/Home.module.css";
 import Anime from "./Anime";
+import Hero from "./Hero";
 
 function Home() {
   const animeArr = useSelector((state) => state.animeList.animeList.data);
@@ -20,15 +23,33 @@ function Home() {
   };
   return (
     <div>
-      <input type="text" onChange={(e) => handleOnChange(e)} />
-      <br />
-      {finalAnime === undefined &&
-        animeArr?.map((anime) => <Anime key={anime.mal_id} anime={anime} />)}
-      {finalAnime?.map((anime) => (
-        <Anime key={anime.mal_id} anime={anime} />
-      ))}
+      <Hero animeArr={animeArr} />
+      <div className={styles.filter}>
+        <input
+          type="text"
+          onChange={(e) => handleOnChange(e)}
+          placeholder="Search Anime..."
+        />
+      </div>
+      <div className={styles.showcase}>
+        {finalAnime === undefined &&
+          animeArr?.map((anime) => <Anime key={anime.mal_id} anime={anime} />)}
+        {finalAnime?.map((anime) => (
+          <Anime key={anime.mal_id} anime={anime} />
+        ))}
+      </div>
 
-      {/* {!finalAnime?.length && <p>no found</p>} */}
+      {!animeArr?.length && (
+        <Circles
+          height="80"
+          width="80"
+          color="#F95091"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass={styles.loader}
+          visible={true}
+        />
+      )}
     </div>
   );
 }
