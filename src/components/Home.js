@@ -22,7 +22,7 @@ function Home() {
   };
   return (
     <div>
-      <Hero />
+      <Hero animeArr={animeArr}/>
       <div className={styles.filter}>
         <input
           type="text"

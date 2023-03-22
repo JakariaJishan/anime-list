@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchEpisode } from "../redux/Anime-list/episodeSlice";
 import styles from "../style/Details.module.css";
 import DisplayEpisodes from "./DisplayEpisodes";
+import Hero from "./Hero";
 
 function Details() {
   const { id } = useParams();
@@ -14,11 +15,14 @@ function Details() {
   }, []);
 
   return (
-    <div className={styles.details}>
-      {episodes?.map((episode) => (
-        <DisplayEpisodes key={episode.mal_id} episode={episode} />
-      ))}
-    </div>
+    <>
+      <Hero episodes={episodes}/>
+      <div className={styles.details}>
+        {episodes?.map((episode) => (
+          <DisplayEpisodes key={episode.mal_id} episode={episode} />
+        ))}
+      </div>
+    </>
   );
 }
 

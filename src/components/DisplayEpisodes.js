@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../style/DisplayEpisodes.module.css";
 
 function DisplayEpisodes({ episode }) {
-  console.log(episode);
   const { title, score, mal_id } = episode;
   return (
     <div className={styles.episodeBody}>

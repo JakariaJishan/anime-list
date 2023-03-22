@@ -1,14 +1,22 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import styles from '../style/Hero.module.css';
-function Hero() {
-  const animeArr = useSelector((state) => state.animeList.animeList.data);
-
+import React from "react";
+import styles from "../style/Hero.module.css";
+function Hero(props) {
   return (
     <div className={styles.bg}>
-      <h2 className={styles.showcaseItem}> Total Anime : {animeArr?.length}</h2>
+      {props?.animeArr && (
+        <h2 className={styles.showcaseItem}>
+          {" "}
+          Total Anime : {props?.animeArr?.length}
+        </h2>
+      )}
+      {props?.episodes && (
+        <h2 className={styles.showcaseItem}>
+          {" "}
+          Total Episodes : {props?.episodes?.length}
+        </h2>
+      )}
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
