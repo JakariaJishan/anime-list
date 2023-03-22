@@ -5,7 +5,6 @@ import styles from "../style/Anime.module.css";
 
 function Anime({ anime }) {
   const { mal_id, title, episodes, images } = anime;
-
   return (
     <>
       <NavLink to={`/episodes/${mal_id}`}>
