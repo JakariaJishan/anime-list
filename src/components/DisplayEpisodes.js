@@ -1,10 +1,20 @@
-import React from 'react';
+import React from "react";
+import styles from "../style/DisplayEpisodes.module.css";
 
-function DisplayEpisodes({episode}) {
-    const {title, url} = episode
+function DisplayEpisodes({ episode }) {
+  console.log(episode);
+  const { title, score, mal_id } = episode;
   return (
-    <div>{title}, {url}</div>
-  )
+    <div className={styles.episodeBody}>
+      <div className={styles.episodeItems}>
+        <div>
+          <p>Episode: {mal_id}</p>
+          <h2>{title}</h2>
+        </div>
+        <p>Rating: {score}</p>
+      </div>
+    </div>
+  );
 }
 
-export default DisplayEpisodes
+export default DisplayEpisodes;

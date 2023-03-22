@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchEpisode } from "../redux/Anime-list/episodeSlice";
+import styles from "../style/Details.module.css";
 import DisplayEpisodes from "./DisplayEpisodes";
 
 function Details() {
@@ -13,7 +14,7 @@ function Details() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.details}>
       {episodes?.map((episode) => (
         <DisplayEpisodes key={episode.mal_id} episode={episode} />
       ))}
