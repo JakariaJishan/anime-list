@@ -1,5 +1,5 @@
 .nav {
-    padding: 20px 0;
+    padding: 16px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,8 +8,8 @@
 
 .header {
     background: rgba(35, 38, 67, .5);
-    position: sticky;
-    top: 0;
+    position: relative;
+    z-index: 10;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 

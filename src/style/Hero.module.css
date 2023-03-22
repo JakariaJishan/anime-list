@@ -4,8 +4,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
+    width: 100%;
+    position: relative;
     margin-top: -58px;
     text-align: center;
+    z-index: 1;
 }
 
 .showcaseItem {
