@@ -23,7 +23,6 @@ function Home() {
   return (
     <div>
       <Hero />
-
       <div className={styles.filter}>
         <input
           type="text"
