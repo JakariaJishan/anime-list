@@ -3,17 +3,18 @@
     grid-template-columns: 1fr 1fr;
 }
 
-a {
+.showcase>a {
     background: #CF4278;
-
+    padding: 1em;
 }
 
-.showcase a:nth-child(4n+3),
+.showcase>a:nth-child(4n+3),
 a:nth-child(4n+2) {
     background: #FC5193;
 }
 
-a:nth-child(odd) {
-    background: #CF4278;
-
+@media screen and (max-width: 600px) {
+    .showcase {
+        grid-template-columns: 1fr;
+    }
 }

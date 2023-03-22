@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: white;
+    gap: 1em;
+}
+
+.rightArrow {
+    text-align: right;
+}
+
+.cardTitle h3 {
+    margin: 0;
+}
+
+.cardTitle h5 {
+    margin: 0;
+}
