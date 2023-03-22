@@ -1,0 +1,19 @@
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+a {
+    background: #CF4278;
+
+}
+
+.showcase a:nth-child(4n+3),
+a:nth-child(4n+2) {
+    background: #FC5193;
+}
+
+a:nth-child(odd) {
+    background: #CF4278;
+
+}

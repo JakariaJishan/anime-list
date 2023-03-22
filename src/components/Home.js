@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import styles from '../style/Home.module.css';
 import Anime from "./Anime";
 
 function Home() {
@@ -21,12 +22,13 @@ function Home() {
   return (
     <div>
       <input type="text" onChange={(e) => handleOnChange(e)} />
-      <br />
-      {finalAnime === undefined &&
-        animeArr?.map((anime) => <Anime key={anime.mal_id} anime={anime} />)}
-      {finalAnime?.map((anime) => (
-        <Anime key={anime.mal_id} anime={anime} />
-      ))}
+      <div className={styles.showcase}>
+        {finalAnime === undefined &&
+          animeArr?.map((anime) => <Anime key={anime.mal_id} anime={anime} />)}
+        {finalAnime?.map((anime) => (
+          <Anime key={anime.mal_id} anime={anime} />
+        ))}
+      </div>
 
       {/* {!finalAnime?.length && <p>no found</p>} */}
     </div>

@@ -8,7 +8,7 @@
 }
 
 .header {
-    background: #2B2D42;
+    background: #FC5193;
     position: sticky;
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -16,7 +16,7 @@
 
 .desktopIcon {
     display: flex;
-    gap: 10px;
+    gap: 40px;
 }
 
 .desktopIcon img:hover {
@@ -28,7 +28,7 @@
 }
 
 .brand {
-    color: blueviolet;
+    color: white;
     font-size: 1em;
     font-weight: bold;
 }
