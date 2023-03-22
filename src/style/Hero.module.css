@@ -1,22 +1,22 @@
 .bg {
-    background: url('../images/background.jpg');
-    background-position: 50% 35%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 290px;
-    width: 100%;
-    position: relative;
-    margin-top: -58px;
-    text-align: center;
-    z-index: 1;
+  background: url('../images/background.jpg');
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 290px;
+  width: 100%;
+  position: relative;
+  margin-top: -58px;
+  text-align: center;
+  z-index: 1;
 }
 
 .showcaseItem {
-    color: white;
-    background: #000;
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  color: white;
+  background: #000;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

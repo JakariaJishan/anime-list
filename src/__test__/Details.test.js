@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
-import DisplayEpisodes from "../components/DisplayEpisodes";
+import DisplayEpisodes from '../components/DisplayEpisodes';
 import store from '../redux/store';
 
 const mockStore = configureStore([]);
@@ -12,7 +12,7 @@ describe('anime redux state tests', () => {
     const state = store.getState().animeList;
     const initialState = {
       animeList: [],
-      loading:false
+      loading: false,
     };
     expect(state).toEqual(initialState);
   });
@@ -21,20 +21,20 @@ describe('anime redux state tests', () => {
       {
         title: 'naruto',
         score: 4.0,
-        mal_id:1
+        mal_id: 1,
       },
     ];
     const state = {
       animeList: {
         episodes,
-        loading:false
+        loading: false,
       },
     };
     const store = mockStore(state);
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <DisplayEpisodes episode ={episodes[0]}/>
+          <DisplayEpisodes episode={episodes[0]} />
         </BrowserRouter>
       </Provider>,
     );
