@@ -15,6 +15,7 @@ function Navbar() {
     ? episodes?.filter((episode) => episode.mal_id == id)
     : [];
 
+    console.log(location);
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
