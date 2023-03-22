@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <h1><b>Calculator</b></h1>
-  <!-- <img src="./src/assets/readme_img.png" alt="calculator image" width="100%" /> -->
+   <h1><b>Anime List</b></h1>
+<img src="https://user-images.githubusercontent.com/73704727/227035082-8a17d55d-bac5-4d87-827b-a6069d104443.png" alt="anime image" width="100%" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Calculator <a name="about-project"></a>
+# 📖 Anime List <a name="about-project"></a>
 
-**Calculator react** is a webapp built using React.
+**Anime List react** is a webapp built using React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +70,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Calculator is currently on construction so it does not have features yet.**
+- **Anime List is currently on construction so it does not have features yet.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +78,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [under_construction](under_construction)
+- [Live Link](https://anime-q544.onrender.com/)
+
+- [Video Presentation](https://drive.google.com/file/d/1MavnfVoqiW9MxGEeSftHyr4wZGtvvlAm/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +105,7 @@ Clone this repository in the desired folder:
 
 ```
 cd my-folder
-git clone https://github.com/JakariaJishan/calculator-react.git
+git clone https://github.com/JakariaJishan/anime-list.git
 ```
 
 ### Install
@@ -111,7 +113,7 @@ git clone https://github.com/JakariaJishan/calculator-react.git
 To install this project:
 
 ```
-cd calculator-react
+cd anime-list
 code .
 npm install
 ```
