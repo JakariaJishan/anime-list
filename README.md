@@ -170,7 +170,9 @@ If you like this project feel free to frok it and use it as you need.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the information provided to build this project.
+I would like to thank Microverse and Nelson Sakwa for the information provided to build this project.
+
+- Original [design](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>) idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
