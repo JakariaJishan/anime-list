@@ -7,7 +7,7 @@ import DisplayEpisodes from './DisplayEpisodes';
 const episode = {
   mal_id: 1,
   title: 'Cowboy Bebop',
-  store:4.0
+  store: 4.0,
 };
 
 describe('test suite for Episode component', () => {

@@ -9,7 +9,7 @@ import Hero from './Hero';
 
 function Details() {
   const { id } = useParams();
-  const episodes = useSelector((state) => state.episodeList.episodeList?.data);
+  const episodes = useSelector((state) => state.episodeList);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchEpisode(id));
@@ -17,13 +17,16 @@ function Details() {
 
   return (
     <>
-      <Hero episodes={episodes} />
+      <Hero episodes={episodes.episodeList.data} />
       <div className={styles.details}>
-        {episodes?.map((episode) => (
+        {episodes.episodeList.data?.map((episode) => (
           <DisplayEpisodes key={episode.mal_id} episode={episode} />
         ))}
         {
-          !episodes?.length && (
+          episodes.episodeList.data?.length === 0 && <p className={styles.noE}>No Episode Found!</p>
+        }
+        {
+          !episodes.loading && (
           <Circles
             height="80"
             width="80"

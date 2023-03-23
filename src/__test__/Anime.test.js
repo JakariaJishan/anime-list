@@ -18,15 +18,15 @@ describe('anime redux state tests', () => {
   });
   it('expects to display one  anime from mock store', () => {
     const anime = [
-         {
-            mal_id: 1,
-            title: 'Cowboy Bebop',
-            episodes: 26,
-            images: {
-              jpg: { image_url: 'https://cdn.myanimelist.net/images/anime/4/19644.jpg' },
-            },
-          },
-          
+      {
+        mal_id: 1,
+        title: 'Cowboy Bebop',
+        episodes: 26,
+        images: {
+          jpg: { image_url: 'https://cdn.myanimelist.net/images/anime/4/19644.jpg' },
+        },
+      },
+
     ];
     const state = {
       animeList: {
