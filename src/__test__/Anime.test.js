@@ -2,31 +2,35 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
-import DisplayEpisodes from '../components/DisplayEpisodes';
+import Anime from '../components/Anime';
 import store from '../redux/store';
 
 const mockStore = configureStore([]);
 
-describe('Episodes redux state tests', () => {
+describe('anime redux state tests', () => {
   it('expects to initially set anime as an empty object', () => {
-    const state = store.getState().episodeList;
+    const state = store.getState().animeList;
     const initialState = {
-      episodeList: [],
+      animeList: [],
       loading: false,
     };
     expect(state).toEqual(initialState);
   });
-  it('expects to display one anime episode from mock store', () => {
-    const episodes = [
-      {
-        title: 'naruto',
-        score: 4.0,
-        mal_id: 1,
-      },
+  it('expects to display one  anime from mock store', () => {
+    const anime = [
+         {
+            mal_id: 1,
+            title: 'Cowboy Bebop',
+            episodes: 26,
+            images: {
+              jpg: { image_url: 'https://cdn.myanimelist.net/images/anime/4/19644.jpg' },
+            },
+          },
+          
     ];
     const state = {
-      episodeList: {
-        episodes,
+      animeList: {
+        anime,
         loading: false,
       },
     };
@@ -34,11 +38,11 @@ describe('Episodes redux state tests', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <DisplayEpisodes episode={episodes[0]} />
+          <Anime anime={anime[0]} />
         </BrowserRouter>
       </Provider>,
     );
-    const episodeName = screen.getByText('naruto');
-    expect(episodeName).toBeInTheDocument();
+    const animeName = screen.getByText('Cowboy Bebop');
+    expect(animeName).toBeInTheDocument();
   });
 });

@@ -1,79 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test suite for Anime component expects to render a snapshot of the Anime component 1`] = `
+exports[`test suite for Episode component expects to render a snapshot of the Episode component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <a
-        class=""
-        href="/episodes/1"
+      <div
+        class="episodeBody"
       >
         <div
-          class="rightArrow"
+          class="episodeItems"
         >
-          <img
-            alt="right arrow icon"
-            src="right-arrow.png"
-          />
-        </div>
-        <div
-          class="card"
-        >
-          <img
-            height="200px"
-            src="https://cdn.myanimelist.net/images/anime/4/19644.jpg"
-            width="150px"
-          />
-          <div
-            class="cardTitle"
-          >
-            <h3>
+          <div>
+            <p>
+              Episode:
+              1
+            </p>
+            <h2>
               Cowboy Bebop
-            </h3>
-            <h5>
-              Total Episodes : 
-              26
-            </h5>
+            </h2>
           </div>
+          <p>
+            Rating:
+          </p>
         </div>
-      </a>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <a
-      class=""
-      href="/episodes/1"
+    <div
+      class="episodeBody"
     >
       <div
-        class="rightArrow"
+        class="episodeItems"
       >
-        <img
-          alt="right arrow icon"
-          src="right-arrow.png"
-        />
-      </div>
-      <div
-        class="card"
-      >
-        <img
-          height="200px"
-          src="https://cdn.myanimelist.net/images/anime/4/19644.jpg"
-          width="150px"
-        />
-        <div
-          class="cardTitle"
-        >
-          <h3>
+        <div>
+          <p>
+            Episode:
+            1
+          </p>
+          <h2>
             Cowboy Bebop
-          </h3>
-          <h5>
-            Total Episodes : 
-            26
-          </h5>
+          </h2>
         </div>
+        <p>
+          Rating:
+        </p>
       </div>
-    </a>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
