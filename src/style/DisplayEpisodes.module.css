@@ -1,0 +1,17 @@
+.episodeItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  color: white;
+  padding: 2em 0;
+}
+
+.episodeBody:nth-child(odd) {
+  background: #e84b88;
+}
+
+.episodeBody:nth-child(even) {
+  background: #ce4479;
+}

@@ -1,0 +1,47 @@
+.nav {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.header {
+  background: rgba(35, 38, 67, 0.5);
+  position: relative;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.desktopIcon {
+  display: flex;
+  gap: 40px;
+}
+
+.desktopIcon img:hover {
+  opacity: 0.7;
+}
+
+.menu {
+  display: none;
+}
+
+.brand {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: block;
+  }
+
+  .desktopIcon {
+    display: none;
+  }
+}

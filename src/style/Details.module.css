@@ -1,0 +1,14 @@
+.loader {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.noE {
+  color: red;
+  text-align: center;
+  margin: 2em 0;
+  font-size: 2em;
+}

@@ -1,28 +1,27 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Details from './components/Details';
+import Home from './components/Home';
+import Layouts from './components/Layouts';
+import { fetchAnime } from './redux/Anime-list/animeSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAnime());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layouts />}>
+          <Route index element={<Home />} />
+          <Route path="/episodes/:id" element={<Details />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
